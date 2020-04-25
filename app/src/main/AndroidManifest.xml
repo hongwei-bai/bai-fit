@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.hongwei.bai_fit">
+    <!-- So your app can target API level 29 (Android 10) or above, request the permission from the user, and register the permission in the application manifest file. -->
+<!--    <uses-permission android:name="android.gms.permission.ACTIVITY_RECOGNITION" />-->
+
+    <!-- Caution: If your app targets API level 28 or below but is running on Android 10, the com.google.android.gms.permission.ACTIVITY_RECOGNITION permission is converted into a pre-granted runtime permission which can be revoked by the user. If revoked, your app’s access to these physical activity data types will be blocked. Update your app to handle this situation. -->
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"

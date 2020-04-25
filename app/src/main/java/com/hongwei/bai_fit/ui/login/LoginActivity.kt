@@ -16,6 +16,8 @@ import android.widget.ProgressBar
 import android.widget.Toast
 
 import com.hongwei.bai_fit.R
+import com.hongwei.bai_fit.domain.GoogleFitConnector
+import com.hongwei.bai_fit.domain.RecordDataUserCase
 
 class LoginActivity : AppCompatActivity() {
 
@@ -95,6 +97,9 @@ class LoginActivity : AppCompatActivity() {
                 loginViewModel.login(username.text.toString(), password.text.toString())
             }
         }
+
+        // domain
+        GoogleFitConnector().connect(this)
     }
 
     private fun updateUiWithUser(model: LoggedInUserView) {
